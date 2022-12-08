@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container text-center d-flex justify-content-between mb-3">
+        <h1>Add New User</h1>
+        <a href="/">Home</a>
+    </div>
+    <div class="container">
+        <form action="/users/add_user" method="POST">
+            <label for="first_name" class="form-label">First Name:</label>
+            <input type="text" class="form-control mb-3" name="first_name">
+            <label for="last_name" class="form-label">Last Name:</label>
+            <input type="text" class="form-control mb-3" name="last_name">
+            <label for="email" class="form-label">Email:</label>
+            <input type="text" class="form-control mb-3" name="email">
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

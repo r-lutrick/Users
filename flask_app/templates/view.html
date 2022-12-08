@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container text-center d-flex justify-content-between">
+        <h1>User {{one_user.id}}</h1>
+        <a href="/">Home</a>
+    </div>
+    <hr>
+    <div class="container d-flex">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{one_user.first_name}}
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    {{one_user.last_name}}
+                </h6>
+                <p class="card-text">
+                    {{one_user.email}}
+                </p>
+                <a href="/users/{{one_user.id}}/edit" class="card-link">Edit</a>
+                <a href="/users/{{one_user.id}}/delete" class="card-link">Delete</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
